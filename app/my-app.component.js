@@ -12,11 +12,12 @@ var core_1 = require('@angular/core');
 var MyAppComponent = (function () {
     function MyAppComponent() {
         this.title = 'Ultra Racing';
+        this.username = 'Jared';
     }
     MyAppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>{{ title }}</h1>\n  <car-parts></car-parts>"
+            template: "<h1>{{ title }}</h1>\n  <h2> Welcome back {{username}}</h2>\n  Edit Name: <input type=\"text\" [(ngModel)]=\"username\">\n  <car-parts></car-parts>"
         }), 
         __metadata('design:paramtypes', [])
     ], MyAppComponent);
