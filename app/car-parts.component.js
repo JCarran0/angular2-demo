@@ -9,32 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var mocks_1 = require('./mocks');
 var CarPartsComponent = (function () {
     function CarPartsComponent() {
-        this.carParts = [
-            {
-                id: 1,
-                name: 'Super Tires',
-                description: 'These tires are the very best',
-                inStock: 5,
-                price: 300
-            },
-            {
-                id: 2,
-                name: 'Reinforced shocks',
-                description: 'Shocks made from kryptonite',
-                inStock: 4,
-                price: 750
-            },
-            {
-                id: 3,
-                name: 'Padded seats',
-                description: 'Super soft seats for a soft ride',
-                inStock: 0,
-                price: 800
-            }
-        ];
     }
+    CarPartsComponent.prototype.ngOnInit = function () {
+        this.carParts = mocks_1.CARPARTS;
+    };
     CarPartsComponent.prototype.totalCarParts = function () {
         var sum = 0;
         for (var _i = 0, _a = this.carParts; _i < _a.length; _i++) {
@@ -47,7 +28,8 @@ var CarPartsComponent = (function () {
     CarPartsComponent = __decorate([
         core_1.Component({
             selector: 'car-parts',
-            template: "<p>There are {{totalCarParts()}} total parts in stock</p>\n    <li *ngFor=\"let carPart of carParts\">\n      <h2>{{carPart.name | uppercase}}</h2>\n      <p>{{carPart.description}}</p>\n      <p>{{carPart.price | currency:'USD':true}}</p>\n      <p *ngIf=\"carPart.inStock > 0\">{{carPart.inStock}} in stock</p>\n      <p *ngIf=\"carPart.inStock === 0\">Out of stock</p>\n    </li>"
+            templateUrl: 'app/car-parts.component.html',
+            styleUrls: ['app/car-parts.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], CarPartsComponent);

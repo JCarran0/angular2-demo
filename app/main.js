@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var platform_browser_dynamic_1 = require('@angular/platform-browser-dynamic');
 var my_app_component_1 = require('./my-app.component');
 var car_parts_component_1 = require('./car-parts.component');
@@ -22,7 +23,7 @@ var AppModule = (function () {
                 my_app_component_1.MyAppComponent,
                 car_parts_component_1.CarPartsComponent
             ],
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
             bootstrap: [my_app_component_1.MyAppComponent]
         }), 
         __metadata('design:paramtypes', [])
